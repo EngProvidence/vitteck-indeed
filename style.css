@@ -1,0 +1,777 @@
+/* 
+them name:vitteck-indeed
+text domain: Emperoah prov
+version:1.0
+Description: vitteck evil twin of indeed job search page
+Tag: responsive, professional, web pro
+ Author: ngonjoh providence
+ Author URI:engprovidence.github.io/portfolio/
+
+*/
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .content{
+    padding:20px;
+    margin: 20px;
+  }
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.875rem;
+    --border-size: .5rem;
+    --text-color: #2d2d2d;
+    --border-color: #e4e2e0;
+    --primary-200: #eef1fe;
+    --primary-600: #2557a7;
+    --primary-700: #164081;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  p {
+    font-size: 0.875rem;
+    color: var(--text-color);
+  }
+  
+  i {
+    color: var(--text-color);
+  }
+  
+  h1 .h1 {
+    font-size: 24px;
+    color: var(--text-color);
+  }
+  
+  h2 .h2 {
+    font-size: 20px;
+    color: var(--text-color);
+  }
+  
+  h3 .h3 {
+    font-size: 18px;
+    color: var(--text-color);
+  }
+  
+  h4 .h4 {
+    font-size: 16px;
+    color: var(--text-color);
+  }
+  
+  h5 .h5 {
+    font-size: 14px;
+  }
+  
+  h6 .h6 {
+    font-size: 14px;
+  }
+  
+  
+  /* ===============================
+                nav bars
+  ================================= */
+  
+  .sidenav {
+    border-left: 1px solid gainsboro;
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99 !important;
+    /* Changed from left: 0; */
+    background-color: #ffffff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 15px;
+  }
+  
+  .closebtn {
+    float: right;
+    border: none;
+  }
+  
+  .sidenav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #1d1d1d;
+    display: block;
+    transition: 0.3s;
+    border: none;
+    font-weight: normal;
+    border-bottom: 1px solid gainsboro;
+  
+  }
+  
+  .nav-arrow {
+    float: right;
+  }
+  
+  .sidenav a:hover {
+    color: var(--primary-700);
+  
+  }
+  
+  .sidenav a:active {
+    border-bottom: 2px solid var(--primary-600);
+    transition-duration: 1s;
+  
+  }
+  
+  .main {
+    transition: margin-right 0.5s;
+    /* Changed from margin-left */
+    padding: 10px;
+  }
+  
+  /* Add media query for smaller screens */
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 10px;
+      width: 90%;
+    }
+  
+    .sidenav a {
+      font-size: 14px;
+    }
+  }
+  
+  .topnav {
+    background-color: none;
+    color: var(--text-color);
+    justify-content: space-between;
+    display: flex;
+    z-index: 9;
+    border: none;
+    border-bottom: 1px var(--border-color) solid;
+  }
+  
+  .topnav .left-part,
+  .topnav .right-part {
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+  }
+  
+  .img-group {
+    height: 100%;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding-left: 20px;
+  }
+  
+  .logo>img {
+    height: 44px;
+    width: auto;
+  }
+  
+  .logo-extra>img {
+    width: 48px;
+    height: auto;
+  }
+  
+  .topnav .menu-item {
+    color: var(--text-color);
+    padding: 1rem 0;
+    text-decoration: none;
+  }
+  
+  .topnav .menu-item-icon {
+    font-size: 1.225rem;
+    display: flex;
+    height: 100%;
+    padding: 1rem .875rem;
+    align-items: flex-end;
+    border-radius: var(--border-size);
+    position: relative;
+  }
+  
+  .topnav .menu-item-icon.text {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-600);
+  }
+  
+  .topnav .menu-item-icon.text.disabled {
+    opacity: .4;
+    cursor: default;
+  }
+  
+  .topnav .menu-item-icon.text.disabled:hover {
+    background-color: transparent;
+  }
+  
+  .topnav .menu-item-icon:hover {
+    background-color: var(--primary-200);
+  }
+  
+  .topnav .menu-item-icon:hover::after {
+    height: 2px;
+    content: "";
+    display: block;
+    width: 100%;
+    background-color: var(--primary-600);
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+  }
+  
+  .topnav .menu-item-icon.text.disabled:hover::after {
+    display: none;
+  }
+  
+  
+  .topnav .menu-item.active,
+  .topnav .menu-item:hover {
+    border-bottom: 2px var(--primary-600) solid;
+  }
+  
+  .nav-div {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 1rem;
+    margin-left: 2rem;
+  }
+  
+  .nav-div2 {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding-bottom: 2px;
+    position: relative;
+  }
+  
+  .nav-div2.gap-min {
+    gap: 0;
+  }
+  
+  .nav-div2::after {
+    position: absolute;
+    bottom: calc(30% - .625rem);
+    right: -20px;
+    height: 40%;
+    width: 1px;
+    background-color: var(--border-color);
+    display: block;
+    content: "";
+  }
+  
+  .nav-div2:last-child::after {
+    display: none;
+  }
+  
+  .pt-4 {
+    padding-top: .9rem;
+  }
+  
+  /* job search and serach criteria */
+  hr {
+    width: 100%;
+    border: 1px solid rgb(235, 230, 230);
+  }
+  
+  p {
+    color: #8e8888;
+  }
+  
+  .job-search {
+    margin: 50px 0;
+    margin-top: 20px !important;
+    margin-left: 75px;
+    margin-right: 75px;
+  
+  }
+  
+  .search-job {
+    display: grid;
+    grid-template-columns: 4fr 4fr 1fr;
+    grid-gap: 10px;
+    font-size: large;
+  }
+  
+  .input {
+    border: 1px solid #8e8888;
+    padding: 12px;
+    border-radius: 10px;
+  }
+  
+  .input[type=search]:hover {
+    outline: var(--primary-600);
+    border: 1px solid var(--primary-700);
+  }
+  
+  .input[type=search]:focus {
+    outline: var(--primary-600);
+    border: 1px solid var(--primary-700);
+    border-bottom: 3px solid var(--primary-700);
+  }
+  
+  select {
+    color: black;
+    margin: 3px;
+    background: gainsboro;
+    padding: 12px;
+    border: none;
+    padding-right: 15px;
+    border-radius: 10px;
+  }
+  
+  .search-criteria select:hover {
+    color: aliceblue;
+    background: gray;
+  }
+  
+  .autofill-item {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  #autofill-list {
+    margin-top: 40px;
+    background: white;
+    z-index: 2;
+    position: absolute;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 25%;
+  }
+  
+  #autofill-list:hover {
+    border: 1px solid #ccc;
+  
+  }
+  
+  /* =========================================== 
+       dropdown button
+    ===========================================*/
+  /* Style the dropdown button */
+  .dropbtn {
+    background-color: #e4e2e0;
+    display: flex;
+    color: #2d2d2d;
+    border-radius: 8px;
+    margin: .2rem;
+    padding: .5rem 1rem;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: .75rem;
+    letter-spacing: 0;
+    line-height: 1.34;
+    max-width: 228px;
+  }
+  
+  .dropbtn:hover {
+    background-color: #cacaca;
+  
+  }
+  
+  .maindropdown {
+    border-radius: 10px;
+    outline: none;
+  
+  }
+  
+  .maindropdown:active {
+    outline: var(--primary-600);
+    border: 1px solid var(--primary-700);
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .arrow {
+    margin-left: .4rem;
+    display: flex;
+    width: 12px;
+    height: 12px;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: black;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu when the button is clicked */
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+  
+  /*  ============================================
+             main section for jobs and details
+     =============================================   */
+  .main {
+    margin: 50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  
+  }
+  
+  /*  section1  for jobs and roles   */
+  .section1 {
+    padding: 30px;
+  }
+  
+  .intro {
+    border-bottom: 2px solid gainsboro;
+    padding: 10px;
+  }
+  
+  .intro a {
+    text-decoration: none;
+    color: var(--primary-600);
+  }
+  
+  .job {
+    margin-top: 10px;
+    padding: 7px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+    line-height: 5px;
+  }
+  
+  .job-head {
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+  
+  }
+  
+  .ellipsis {
+    float: left;
+  }
+  
+  .job-type1 {
+    font-weight: bold;
+    width: fit-content;
+    background: #e8e2e2;
+    padding: 12px;
+    border-radius: 7px;
+  }
+  
+  
+  /* section2 for roles/job  details */
+  .section2 {
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    padding: 10px;
+    height: min-content;
+  }
+  
+  .sticky {
+    position: sticky;
+    top: 73px;
+    width: 100%;
+  }
+  
+  .detail-in-full h3 {
+    color: #1d1d1d;
+  }
+  .bd-color{
+    border: 1px solid var(--primary-600);
+  }
+  .sbtn, .sbtn1{
+    color: aliceblue;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    background: var(--primary-600);
+    padding: 5px 8px;
+    border-radius: 10px;
+  }
+  .sbtn1{
+    font-size: large;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .button1 {
+    outline: none;
+    color: #655f5f;
+    font-size: larger;
+    background: gainsboro;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .detail-in-full {
+    overflow: auto;
+    padding: 15px;
+    height: 250px;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    color: #676262;
+  }
+  
+  
+  /* ========================================
+        =media queries=
+  ======================================= */
+  
+  /* ==================phone media queries============================ */
+  
+  @media only screen and (max-width: 550px) {
+    /* job search and serach criteria */
+    #mainsection2{
+      display: none;
+    }
+  
+    .job-search {
+      margin: 20px;
+  
+    }
+  
+    .search-job {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+      font-size: large;
+    }
+  
+    .input {
+      width: 98% !important;
+    }
+  
+    /*   main section for jobs and details   */
+    .main {
+      margin: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
+  
+    }
+    .footer-div {
+      align-items: flex-start;
+      display: block;
+      margin-right:3%;
+     
+  }
+  .lists,
+  .list2 {
+    display: block;
+  
+  }
+  .list-item,
+  .list2-item {
+    
+    padding-left: 5px!important;
+  
+  }
+  }
+  
+  /* ==================tablet media queries============================ */
+  
+  @media screen and (min-width: 551px) and (max-width:900px) {
+    .job-search {
+      margin: 20px;
+    }
+  
+    /*   main section for jobs and details   */
+    .main {
+      margin: 10px;
+      display: grid;
+      grid-template-columns: 1fr;
+  
+    }
+  
+  }
+  
+  
+  
+  
+  /* ===================================================================
+                           FOOTER
+     =================================================================== */
+  
+  .job-footer {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .footer-div {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    margin-right:20%;
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--text-color);
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+  
+  .lists {
+    margin-bottom: 1rem;
+  
+  }
+  
+  .lists,
+  .list2 {
+    list-style: none;
+    display: flex;
+    flex-flow: wrap;
+  
+  }
+  
+  .list2 {
+    margin-bottom: 0.75rem;
+  }
+  
+  .list-item,
+  .list2-item {
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.875rem;
+    line-height: 2;
+    padding-left: 20px;
+  
+  }
+  .list-item:hover,
+  .list2-item :hover{
+    text-decoration:underline;
+  }
+  
+  .cpra-icon {
+    display: inline-block;
+    height: 0.9375rem;
+    vertical-align: text-top;
+    width: 1.875rem;
+    color: #2557a7;
+  }
+  
+  
+  /* 23-09-2023 */
+  
+  
+  .container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 1470px) {
+    .container {
+      max-width: 1280px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .container {
+      max-width: 1140px;
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .container {
+      max-width: 980px;
+      width: 100%;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .container {
+      max-width: 720px;
+      width: 100%;
+    }
+  }
+  
+  .dynamic-search {
+    border: 1px var(--border-color) solid;
+    flex: 1;
+    border-radius: 8px;
+    display: flex;
+  }
+  
+  .dynamic-search:hover, .dynamic-search:focus {
+    border: 1px solid var(--primary-700);
+  }
+  
+  .dynamic-search-label {
+    font-weight: 500;
+    padding: 5px 16px;
+  }
+  
+  .dynamic-search-input {
+    flex: 1;
+    align-items: center;
+    border: none;
+  }
+  
+  .dynamic-search-input:focus {
+    outline: none;
+  }
+  
+  .dynamic-search-icon {
+    padding: 5px 16px;
+  }
+  /* =========25-09-23=========== */
+  
+  .dynamic-job-search {
+    border: 1px var(--border-color) solid;
+    flex: 1;
+    border-radius: 8px;
+    display: flex;
+  }
+  
+  .dynamic-job-search:hover, .dynamic-job-search:focus {
+    border: 1px solid var(--primary-700);
+  }
+  
+  .dynamic-job-search-label {
+    font-weight: 500;
+    padding: 5px 16px;
+  }
+  
+  .dynamic-job-search-input {
+    flex: 1;
+    align-items: center;
+    border: none;
+  }
+  
+  .dynamic-job-search-input:focus {
+    outline: none;
+  }
+  
+  .dynamic-job-search-icon {
+    padding: 5px 16px;
+  }
+  
+  
